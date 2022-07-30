@@ -62,6 +62,7 @@ begin
   try
   // init. action
   button1.Enabled := false;
+  ProgressBar1.Visible := true;
   // get input file size
   inputlength :=  TextfileSize(Edit1.Text);
   // file size = 0 : exit
@@ -111,10 +112,12 @@ begin
   closefile(filin);
   closefile(filout);
   Application.MessageBox('Job''s done.','',0);
+  ProgressBar1.Visible := false;
 
   except
     begin
       Application.MessageBox('Error !!','',0);
+      ProgressBar1.Visible := false;
     end;
 
   end;

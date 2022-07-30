@@ -64,5 +64,6 @@ object Form1: TForm1
     Width = 482
     Height = 17
     TabOrder = 3
+    Visible = False
   end
 end
